@@ -3,10 +3,10 @@
 }
 
 body {
-  margin: 0;
+  padding: 1rem;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: white;
+  background: linear-gradient(45deg, #c2d596, #96d5be)
 }
 
 nav {
@@ -36,11 +36,9 @@ nav a[aria-current='page'] {
   background-color: #d4d4d4;
 }
 
-main {
-  padding: 1rem;
-}
-
-h1 {
-  font-weight: bold;
-  font-size: 1.5rem;
+.loading {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
