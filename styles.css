@@ -86,9 +86,9 @@ a[aria-current='page'] {
 
 .contentTable {
   display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  width: 80%;
+  gap: 3rem;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .tableImage {
@@ -101,6 +101,7 @@ a[aria-current='page'] {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  max-width: 40%;
 }
 
 .textColumn {
