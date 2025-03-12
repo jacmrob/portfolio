@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
   font-family: "Chakra Petch", sans-serif;
   font-weight: 300;
   color: black;
@@ -134,14 +133,18 @@ a[aria-current='page'] {
   display: flex;
   flex-direction: row;
   background-color: #d7ffd7;
-  padding: 1rem 12% 0 12%;
+  padding: 1rem 12%;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: baseline;
 }
 
 /* Page Content */
 
 main {
+  min-height: 100vh;
   gap: 3rem;
-  padding: 5rem 12%;
+  padding: 3rem 12%;
 }
 
 .subheader {

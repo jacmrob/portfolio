@@ -4,15 +4,13 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Geo:ital@0;1&family=VT323&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0eaf40504c.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="headerRow">
@@ -32,6 +30,11 @@
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
       </svg>
     </div>
-    <!-- <div class="loading">wait for it</div> -->
+    <main></main>
+    <div w3-include-html="footer.html"></div>
+    <script>
+      w3.includeHTML();
+    </script> 
   </body>
+ 
 </html>
