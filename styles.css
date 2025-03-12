@@ -34,8 +34,8 @@ body {
 }
 
 a {
-  color: black;
-  text-decoration: none;
+  color: rgb(255, 129, 10);;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -45,6 +45,7 @@ a:hover {
 
 a[aria-current='page'] {
   text-decoration: underline;
+  color: rgb(255, 129, 10);
 }
 
 /* Page Header */
@@ -58,12 +59,19 @@ a[aria-current='page'] {
   padding: 1rem 10rem;
 }
 
+.headerLink {
+  color: black;
+  text-decoration: none;
+}
+
 .headerLink:hover {
-  color: #578b78;
+  color: rgb(255, 129, 10);
   cursor: pointer;
 }
 
 .titleText {
+  color: black;
+  text-decoration: none;
   font-size: 2rem;
   font-weight: 350;
   margin-right: 2rem;
@@ -72,7 +80,7 @@ a[aria-current='page'] {
 }
 
 .titleText:hover {
-  color: #578b78;
+  color: rgb(255, 129, 10);
   cursor: pointer;
 }
 
