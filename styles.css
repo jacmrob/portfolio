@@ -189,3 +189,10 @@ main {
   gap: 0.5rem;
   justify-content: center;
 }
+
+.substackIcon {
+  height: 18px;
+  width: 18px;
+  margin-right: 0.25rem;
+  color: white;
+}
