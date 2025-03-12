@@ -180,6 +180,7 @@ main {
   flex-direction: row;
   gap: 2rem;
   max-width: 40%;
+  min-width: 20rem;
 }
 
 .textColumn {
