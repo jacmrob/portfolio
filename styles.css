@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-family: "Chakra Petch", sans-serif;
   font-weight: 300;
   color: black;
@@ -48,6 +49,21 @@ a[aria-current='page'] {
   color: rgb(255, 129, 10);
 }
 
+.btn {
+  background:rgb(255, 129, 10);
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.btn:hover {
+  background: #ffffff;
+  color: rgb(255, 129, 10);
+}
+
 /* Page Header */
 
 .headerRow {
@@ -56,7 +72,7 @@ a[aria-current='page'] {
   justify-content: space-between;
   align-items: center;
   background-color: #d7ffd7;
-  padding: 1rem 10rem;
+  padding: 1rem 12% 0 12%;
 }
 
 .headerLink {
@@ -74,7 +90,6 @@ a[aria-current='page'] {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 350;
-  margin-right: 2rem;
   padding: 1rem 0;
   letter-spacing: 0.5rem;
 }
@@ -113,19 +128,35 @@ a[aria-current='page'] {
   overflow-y: scroll;
 }
 
+/* Page Footer */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #d7ffd7;
+  padding: 1rem 12% 0 12%;
+}
+
 /* Page Content */
 
 main {
   gap: 3rem;
-  padding: 5rem 10rem;
+  padding: 5rem 12%;
 }
 
 .subheader {
   display: block;
-  text-align: center;
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 2rem 0;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem 0;
+  gap: 5rem;
 }
 
 .contentTable {
