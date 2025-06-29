@@ -36,12 +36,12 @@ body {
 }
 
 a {
-  color: rgb(255, 129, 30);;
+  color: #000000ae;
   text-decoration: underline;
 }
 
 a:hover {
-  color: white;
+  color:  rgb(255, 129, 30);
   cursor: pointer;
 }
 
@@ -67,6 +67,12 @@ a[aria-current='page'] {
 
 /* Page Header */
 
+.knewave-regular {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .headerRow {
   display: flex;
   flex-direction: row;
@@ -87,10 +93,12 @@ a[aria-current='page'] {
 }
 
 .titleText {
-  color: black;
+  color: rgb(255, 129, 10);
+  font-family: "Knewave", system-ui;
+  font-style: normal;
+  font-weight: 400;
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 350;
   padding: 1rem 0;
   letter-spacing: 0.5rem;
 }
@@ -137,8 +145,13 @@ a[aria-current='page'] {
   background-color: #d7ffd7;
   padding: 1rem 18%;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: baseline;
+  color: #000000ae;
+
+  a {
+    color: #000000ae;
+  }
 }
 
 /* Page Content */
@@ -147,7 +160,7 @@ main {
   min-height: 100vh;
   gap: 3rem;
   padding: 3rem 18%;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .subheader {
