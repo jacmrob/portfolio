@@ -32,7 +32,47 @@
       renderHeader("home");
     </script>
 
-    <main></main>
+    <main>
+      <div class="aboutMe">
+        <div class="aboutMeText">Hi it's me. here's some text about me</div>
+        <img src="./assets/self_portrait_sq.JPG" alt="me" class="selfImg" />
+      </div>
+
+      <div class="slideButtonContainer">
+        <div class="carouselContainer">
+          <div class="carouselTrack">
+            <div class="carouselSlide" id="highlight1">
+              <div>line one</div>
+              <div>line two</div>
+              <div>line three</div>
+            </div>
+            <div class="carouselSlide" id="highlight2">goodbye world</div>
+            <div class="carouselSlide" id="highlight3">hiiii world</div>
+          </div>
+        </div>
+
+        <div class="carouselDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+
+      <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+          const track = document.querySelector(".carouselTrack");
+          const slides = document.querySelectorAll(".carouselSlide");
+          const totalSlides = slides.length;
+
+          currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+
+          const offset = -currentIndex * 100;
+          track.style.transform = `translateX(${offset}%)`;
+        }
+      </script>
+    </main>
     <div w3-include-html="footer.html"></div>
     <script>
       w3.includeHTML();
