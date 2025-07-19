@@ -180,6 +180,11 @@ main {
   font-size: 18px;
 }
 
+blockquote {
+  content: '“';
+  font-size: 1rem;
+}
+
 .subheader {
   display: block;
   font-size: 1.5rem;
@@ -266,19 +271,28 @@ main {
 .aboutMe {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.aboutMeText {
+/* .aboutMeText {
   width: 100%;
   max-width: 20rem;
-}
+} */
 
 .selfImg {
-  height: 50%;
-  width: 50%;
+  height: 30%;
+  width: 30%;
   border-radius: 50%;
+  min-width: 250px;
+  object-fit: cover;
+}
+
+.sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

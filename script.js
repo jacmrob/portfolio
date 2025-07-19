@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startAutoRotate() {
-    autoRotateInterval = setInterval(nextSlide, 4000); // 4 seconds
+    autoRotateInterval = setInterval(nextSlide, 5000); // 5 seconds
   }
 
   function restartAutoRotate() {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // biome-ignore lint/complexity/noForEach: <explanation>
   dots.forEach((dot) => {
     dot.addEventListener("click", () => {
-      const index = Number.parseInt(dot.dataset.index, 10);
+      const index = Number.parseInt(dot.dataset.index);
       goToSlide(index);
       restartAutoRotate(); // Reset timer on manual navigation
     });
