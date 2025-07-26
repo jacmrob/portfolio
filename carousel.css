@@ -28,8 +28,6 @@
   .slideButtonContainer {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between;
-    align-items: baseline; */
     gap: 0.5rem;
   }
 
@@ -53,3 +51,11 @@
   .dot.active {
     background: rgb(255, 129, 10);
   }
+
+
+/* Hide carousel for smaller screens */
+@media (max-width: 768px) {
+  .slideButtonContainer {
+    display: none;
+  }
+}
