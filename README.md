@@ -1,3 +1,13 @@
 # portfolio
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/jacmrob/portfolio)
+To install dependencies
+
+```
+npm install
+```
+
+To run the server
+
+```
+npm start
+```

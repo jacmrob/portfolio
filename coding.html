@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jackie Roberti - Coding</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Geo:ital@0;1&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0eaf40504c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+    <script type="module">
+      import { renderHeader } from "./script.js";
+      renderHeader("coding");
+    </script>
+
+    <main>
+      <div style="padding: 1rem 0">
+        <div class="textRow">
+          I write code for projects that make our world more liveable,
+          sustainable, and equitable. Currently, I work for the MBTA building
+          <a href="https://mycharlie.mbta.com/reduced"
+            >reduced fares programs</a
+          >
+          for public transit. I'm also an adjunct faculty at North Shore
+          Community College, where I teach high schoolers the basics of tech
+          through their
+          <a href="https://www.northshore.edu/early-college/index.html"
+            >Early College Program</a
+          >.
+        </div>
+        <div class="textRow">
+          You can see more of my work (including this site!) on my
+          <a href="https://github.com/jacmrob">Github</a>.
+        </div>
+        <div class="subheader">Technical Resume</div>
+        <iframe
+          src="/assets/Technical_Resume_2024.pdf#toolbar=0"
+          width="100%"
+          style="height: 90vh; border: none"
+          seamless="seamless"
+        >
+        </iframe>
+
+        <div class="subheader">Teaching</div>
+        <div class="textRow">
+          These courses were taught to high school students as part of North
+          Shore's Early College Program. All curricula and lecture slides were
+          developed and created by me.
+        </div>
+        <div class="contentTable">
+          <div class="contentRow">
+            <div class="textColumn">
+              <b>CPS 100: IT and Its Applications</b>
+              <div style="margin-bottom: 1rem">
+                Students learn the basics of computer software and hardware,
+                what applications are and how they work in modern ecosystems,
+                networking and the Internet, how to work with databases
+                (including basic SQL). Students use Microsoft Word, Powerpoint,
+                Excel, and Access to complete projects related to course
+                concepts.
+              </div>
+              <a
+                href="https://drive.google.com/file/d/1IrZPhv21PdtNHvpoTl3uhGNRzBwcbpK0/view?usp=sharing"
+                target="_blank"
+                >Download Lecture Slides</a
+              >
+            </div>
+          </div>
+          <div class="contentRow">
+            <div class="textColumn">
+              <b>CPS 140: HTML</b>
+              <div>
+                Students learn how HTML, CSS, and Javascript work together to
+                make static websites. Over the course of the semester, students
+                design and build a website on a topic of their choice.
+              </div>
+              <a
+                href="https://drive.google.com/file/d/1kCD_dI5oW9TgfqTpqcd9TryuIeUQEoP-/view?usp=sharing"
+                target="_blank"
+                >Download Lecture Slides</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div w3-include-html="footer.html"></div>
+    <script>
+      w3.includeHTML();
+    </script>
+  </body>
+</html>

@@ -4,17 +4,188 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Geo:ital@0;1&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/0eaf40504c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <div class="loading">wait for it</div>
+    <div id="header-container"></div>
+    <script type="module">
+      import { renderHeader } from "./script.js";
+      renderHeader("home");
+    </script>
+
+    <main>
+      <div class="aboutMe">
+        <div class="aboutMeText">
+          <div>
+            Writer by instinct, artist by practice, coder by profession. I have
+            a hard time picking a lane. I like making things and telling
+            stories. My work tends towards mixed media -- watercolor, ink, text.
+            I often draw inspiration from adventures in the natural world, and
+            hope my work inspires others to seek out adventure and protect
+            spaces for the future. When I'm not traveling you can find me in
+            Boston, MA, usually with paints in hand.
+          </div>
+          <div class="buttonRow">
+            <button class="btn" onclick="">art</button>
+            <button class="btn" onclick="">writing</button>
+            <button class="btn" onclick="">coding</button>
+          </div>
+        </div>
+
+        <img src="./assets/self_portrait_sq.JPG" alt="me" class="selfImg" />
+      </div>
+
+      <div class="slideButtonContainer">
+        <div class="subheader">What's new?</div>
+        <div class="carouselContainer">
+          <div class="carouselTrack">
+            <div class="carouselSlide" id="highlight1">
+              <div style="display: flex; flex-direction: row; gap: 2rem">
+                <img
+                  src="assets/reckoning9cover.jpg"
+                  style="max-width: 250px; max-height: 400px; object-fit: cover"
+                />
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    justify-content: center;
+                  "
+                >
+                  <div>
+                    My climate fiction story <i>"New Niches"</i> was published
+                    in Reckoning, a literary magazine for environmental justice
+                  </div>
+                  <blockquote>
+                    A metallic buzzing fills the air as we approach. The
+                    turbine’s three massive blades, each the height of a
+                    five-story building, are spinning quickly today. The sky is
+                    cloudless and bright, but it doesn’t do much to change the
+                    air of desolation about the place. Even at the start of
+                    August, the Labrador Sea is cold and mean.
+                    <br />“You remember the safety briefing?” <br />
+                    “Bad weather, stay inside.”
+                  </blockquote>
+                  <div style="font-size: 18px">
+                    Order the
+                    <a
+                      href="https://reckoning.press/reckoning-9/"
+                      target="_blank"
+                      >ebook</a
+                    >
+                    online, or read for free at
+                    <a href="https://reckoning.press" target="_blank"
+                      >reckoning.press</a
+                    >
+                    on August 25th.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carouselSlide" id="highlight2">
+              <div>Comic aspirations</div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  gap: 2rem;
+                  justify-content: center;
+                "
+              >
+                <img src="assets/nc_slide1.jpg" style="width: 45%" />
+                <img src="assets/nc_slide2.jpg" style="width: 45%" />
+              </div>
+              <div style="font-size: 18px">
+                During a several-week stay in northern New Hampshire I created a
+                series of paintings, which became this short comic, now
+                published in
+                <a
+                  href="https://quarterpress.com/shop-qp/p/pdf-the-quarterly-vol-xii-"
+                  target="_blank"
+                  >The Quarterly</a
+                >.
+              </div>
+            </div>
+            <div class="carouselSlide" id="highlight3">
+              <div style="display: flex; flex-direction: row; gap: 2rem">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    justify-content: center;
+                  "
+                >
+                  <div>
+                    From August 20th to 26th I will be the
+                    <a
+                      href="https://www.mshinstitute.org/artist-in-residence"
+                      target="_blank"
+                      >artist in residence</a
+                    >
+                    at Mt. St. Helens, an active volcano in the pacific
+                    northwest.
+                  </div>
+                  <div>
+                    I'll be leading watercolor painting workshops on the
+                    mountain, as well as working on my own art. Stay tuned for
+                    what I produce!
+                  </div>
+                </div>
+                <img
+                  src="assets/fish_and_owl3.jpg"
+                  style="max-width: 250px; max-height: 400px; object-fit: cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carouselDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+
+      <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+          const track = document.querySelector(".carouselTrack");
+          const slides = document.querySelectorAll(".carouselSlide");
+          const totalSlides = slides.length;
+
+          currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+
+          const offset = -currentIndex * 100;
+          track.style.transform = `translateX(${offset}%)`;
+        }
+      </script>
+    </main>
+    <div w3-include-html="footer.html"></div>
+    <script>
+      w3.includeHTML();
+    </script>
   </body>
 </html>

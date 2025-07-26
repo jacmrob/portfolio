@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jackie Roberti - Art</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Geo:ital@0;1&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0eaf40504c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+    <script type="module">
+      import { renderHeader } from "./script.js";
+      renderHeader("art");
+    </script>
+
+    <main>
+      <div style="padding: 1rem 0">
+        <div class="textRow">
+          I use watercolor and pen to capture scenes and impressions, usually
+          on-site. Sometimes I make digital art. You can follow my creations,
+          good and bad, on <a href="patreon.com/pleinjus">Patreon</a> or
+          <a href="instagram.com/jackieroberti">Instagram.</a>
+        </div>
+      </div>
+      <div class="gallery" id="gallery"></div>
+
+      <!-- Lightbox Modal -->
+      <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" />
+      </div>
+
+      <div class="subheader">Stickers</div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          flex-wrap: wrap;
+          align-items: flex-end;
+        "
+      >
+        <div class="sticker">
+          <img src="assets/jijisticker.png" />
+          <a
+            href="https://www.patreon.com/pleinjus/shop/grumpy-jiji-stickers-229168?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=productshare_creator&utm_content=join_link"
+            target="_blank"
+            >Grumpy Jiji</a
+          >
+          <div>Die-cut, glossy. <br />2.3" x 2.5" or 1" x 1"</div>
+        </div>
+
+        <div class="sticker">
+          <img src="assets/watchtvsticker.png" />
+          <a
+            href="https://www.patreon.com/pleinjus/shop/watch-tv-sticker-264276?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=productshare_creator&utm_content=join_link"
+            target="_blank"
+            >Watch TV</a
+          >
+          <div>
+            Die-cut, matte. <br />
+            3" x 2.8"
+          </div>
+        </div>
+      </div>
+
+      <div class="subheader">Commissions</div>
+      <div style="margin-bottom: 1rem">
+        Prices on a sliding scale. Contact me with details.
+      </div>
+      <form id="commissionForm">
+        <input type="hidden" name="_subject" value="Commission request" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="box" />
+
+        <label for="name">Name</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="message">Request</label><br />
+        <textarea id="message" name="message" rows="6" required></textarea
+        ><br /><br />
+
+        <button class="btn" type="submit">Send Request</button>
+      </form>
+
+      <!-- Modal -->
+      <div class="modal" id="thankYouModal">
+        <div class="modalContent">
+          <p>Thanks! Your commission request has been sent.</p>
+          <button class="btn" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+
+      <script>
+        const form = document.getElementById("commissionForm");
+        const modal = document.getElementById("thankYouModal");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(form);
+
+          fetch("https://formsubmit.co/ajax/jacqueline.roberti93@gmail.com", {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                form.reset();
+                modal.style.display = "block";
+              } else {
+                alert("There was an error. Please try again later.");
+              }
+            })
+            .catch((error) => {
+              alert("Something went wrong. Please try again later.");
+              console.error(error);
+            });
+        });
+
+        function closeModal() {
+          modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      </script>
+    </main>
+
+    <script src="gallery.js"></script>
+    <div w3-include-html="footer.html"></div>
+    <script>
+      w3.includeHTML();
+    </script>
+  </body>
+</html>
