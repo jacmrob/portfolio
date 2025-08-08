@@ -164,16 +164,21 @@ input, textarea, button {
 }
 
 .navMenu {
-  padding: 1rem;
   display: inline-block;
   position: relative;
-  touch-action: manipulation; 
+  
 }
 
 @media screen and (min-width: 769px) {
   .navMenu {
     display: none;
   }
+}
+
+.navMenu i {
+  touch-action: manipulation; 
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
 .navMenu i:hover {
