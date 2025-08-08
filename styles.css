@@ -166,6 +166,7 @@ input, textarea, button {
 .navMenu {
   display: inline-block;
   position: relative;
+  cursor: pointer;
   
 }
 
