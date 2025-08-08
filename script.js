@@ -31,11 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navContent.classList.remove("show");
     }
   });
-  document.addEventListener("touchstart", (e) => {
-    if (!document.querySelector(".navMenu").contains(e.target)) {
-      navContent.classList.remove("show");
-    }
-  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
