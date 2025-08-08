@@ -21,12 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".navMenu");
   const navContent = document.querySelector(".navMenuContent");
 
-  menu.addEventListener("pointerdown", (e) => {
+  menu.addEventListener("click", (e) => {
     e.stopPropagation();
     navContent.classList.toggle("show");
   });
 
-  document.addEventListener("pointerdown", (e) => {
+  menu.addEventListener("touchstart", (e) => {
+    e.stopPropagation();
+    navContent.classList.toggle("show");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!document.querySelector(".navMenu").contains(e.target)) {
+      navContent.classList.remove("show");
+    }
+  });
+
+  document.addEventListener("touchstart", (e) => {
     if (!document.querySelector(".navMenu").contains(e.target)) {
       navContent.classList.remove("show");
     }

@@ -179,6 +179,7 @@ input, textarea, button {
   touch-action: manipulation; 
   padding: 1rem;
   font-size: 1.5rem;
+  color: #444444;
 }
 
 .navMenu i:hover {
