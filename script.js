@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
       navContent.classList.remove("show");
     }
   });
+  document.addEventListener("touchend", (e) => {
+    if (!document.querySelector(".navMenu").contains(e.target)) {
+      navContent.classList.remove("show");
+    }
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
