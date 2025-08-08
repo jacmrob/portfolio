@@ -21,17 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".navMenu");
   const navContent = document.querySelector(".navMenuContent");
 
-  menu.addEventListener("click", (e) => {
+  menu.addEventListener("pointerdown", (e) => {
     e.stopPropagation();
     navContent.classList.toggle("show");
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("pointerdown", (e) => {
     if (!document.querySelector(".navMenu").contains(e.target)) {
       navContent.classList.remove("show");
     }
   });
-  document.addEventListener("touchend", (e) => {
+  document.addEventListener("touchstart", (e) => {
     if (!document.querySelector(".navMenu").contains(e.target)) {
       navContent.classList.remove("show");
     }

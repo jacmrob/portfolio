@@ -167,6 +167,7 @@ input, textarea, button {
   padding: 1rem;
   display: inline-block;
   position: relative;
+  touch-action: manipulation; 
 }
 
 @media screen and (min-width: 769px) {
