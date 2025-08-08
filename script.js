@@ -16,6 +16,23 @@ export const renderHeader = (currentPage) => {
     });
 };
 
+// Toggle menu header
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".navMenu .fa-bars");
+  const navContent = document.querySelector(".navMenuContent");
+
+  menuIcon.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navContent.classList.toggle("show");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!document.querySelector(".navMenu").contains(e.target)) {
+      navContent.classList.remove("show");
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
   const track = document.querySelector(".carouselTrack");

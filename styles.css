@@ -49,6 +49,7 @@ a:hover {
 a[aria-current='page'] {
   text-decoration: underline;
   color: rgb(255, 129, 30);
+  font-weight: 700;
 }
 
 .btn {
@@ -103,6 +104,7 @@ input, textarea, button {
 .headerLink {
   color: black;
   text-decoration: none;
+  letter-spacing: 0.1rem;
 }
 
 .headerLink:hover {
@@ -153,6 +155,57 @@ input, textarea, button {
   padding: 0.5rem;
   flex-wrap: nowrap;
   overflow-y: scroll;
+}
+
+@media (max-width: 768px) {
+  .navButtons {
+    display: none;
+  }
+}
+
+.navMenu {
+  display: inline-block;
+  position: relative;
+
+}
+
+@media screen and (min-width: 769px) {
+  .navMenu {
+    display: none;
+  }
+}
+
+.navMenu i:hover {
+  cursor: pointer;
+  color: rgb(255, 129, 10);
+}
+
+.navMenu:hover .navMenuContent {
+  display: flex;
+}
+
+.navMenuContent {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 0.5rem 0;
+  background-color: #d7ffd7;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.navMenuContent.show {
+  display: flex;
+}
+
+.navMenuLink {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Page Footer */
