@@ -18,10 +18,10 @@ export const renderHeader = (currentPage) => {
 
 // Toggle menu header
 document.addEventListener("DOMContentLoaded", () => {
-  const menuIcon = document.querySelector(".navMenu .fa-bars");
+  const menu = document.querySelector(".navMenu");
   const navContent = document.querySelector(".navMenuContent");
 
-  menuIcon.addEventListener("click", (e) => {
+  menu.addEventListener("click", (e) => {
     e.stopPropagation();
     navContent.classList.toggle("show");
   });
