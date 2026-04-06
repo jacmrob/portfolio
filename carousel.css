@@ -30,6 +30,21 @@
     gap: 0.5rem;
   }
 
+  .slideContent {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+  }
+
+  .slideContent.row {
+      flex-direction: row;
+  }
+  
+  .slideContent.column {
+    flex-direction: column;
+  }
+
 /* Dots */
 .carouselDots {
     text-align: center;
